@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
+import {  BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Trip({trip}) {
     return (
@@ -10,7 +11,9 @@ function Trip({trip}) {
                     <Card.Title>{trip.location}</Card.Title>
                     <Card.Text>{trip.dates}</Card.Text>
                     <Card.Text>{trip.active ? 'Active' : 'Past'}</Card.Text>
-                    <Button variant='info'>Trip Details</Button>
+                    <Link to="/id">
+                        <Button className="tripButton" variant='info'>Trip Details</Button>
+                    </Link>
                 </Card.Body>
             </Card>
         </>

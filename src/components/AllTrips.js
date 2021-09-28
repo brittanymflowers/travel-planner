@@ -1,9 +1,12 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 import Trip from './Trip'
+import NewTripButton from './NewTripButton';
 
 function AllTrips({trips}) {
     return (
+        <div>
+        <NewTripButton />
         <Container >
             <Row className='row'>
             {trips.map((trip, index) => (
@@ -11,6 +14,8 @@ function AllTrips({trips}) {
             ))}
             </Row>
         </Container>
+        </div>
+        
     )
 }
 
