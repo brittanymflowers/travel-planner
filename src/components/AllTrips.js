@@ -4,8 +4,8 @@ import Trip from './Trip'
 
 function AllTrips({trips}) {
     return (
-        <Container className='row'>
-            <Row >
+        <Container >
+            <Row className='row'>
             {trips.map((trip, index) => (
                 <Trip key={index} trip={trip} />
             ))}

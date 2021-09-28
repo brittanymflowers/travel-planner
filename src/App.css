@@ -1,21 +1,17 @@
-/* .App {
+.App {
   text-align: center;
-  background-color: pink;
-} */
+}
 
 .header {
-  background-color: pink;
   display: flex;
   justify-content: center;
 }
 
-.row {
-  background-color: #282c34;
+ .row {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   color: black;
+  justify-content: center;
+  justify-self: center;
 }
 
 .App-link {
@@ -23,9 +19,19 @@
 }
 
 #tripCard {
-  border-color: red;
+  border-color: black;
   border-radius: 30px;
-  border: solid, 100px;
+  border: solid;
   width: 18rem;
   margin: 20px;
+}
+
+.button {
+  margin: 20px;
+}
+
+.cardImage {
+  width: 100%;
+  margin-top: 20px;
+  height: 100%;
 }
