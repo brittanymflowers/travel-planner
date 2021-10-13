@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Modal, Form } from 'react-bootstrap'
 
-function NewTripButton() {
+function NewTripButton(setTrips, trips) {
     const [show, setShow] = useState(false);
     const [location, setLocation] = useState('');
     const [dates, setDates] = useState('');
@@ -9,6 +9,20 @@ function NewTripButton() {
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    function handleSubmit() {
+        const updateTrips = [
+            ...trips,
+            {
+                id: 7,
+                location: location,
+                img: img,
+                dates: dates,
+                active: true
+            }
+        ];
+        setTrips(updateTrips);
+    }
 
         return (
             <div>
@@ -33,7 +47,7 @@ function NewTripButton() {
                             <Form.Label>Image (optional)</Form.Label>
                             <Form.Control type="input" placeholder="Image URL" value={img} onChange={(e) => setImg(e.target.value)}/>                            
                         </Form.Group>
-                        <Button variant="primary" type="submit">
+                        <Button variant="primary" type="submit" onClick={handleSubmit}>
                             Create
                         </Button>
                     </Form>

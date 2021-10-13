@@ -1,8 +1,13 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
-import {  BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 
-function Trip({trip}) {
+function Trip({trip, setSelectedTrip, selectedTrip}) {
+
+    const handleClick = () => {
+        setSelectedTrip(trip);
+    }
+
     return (
         <>
             <Card id='tripCard' >
@@ -10,14 +15,14 @@ function Trip({trip}) {
                 <Card.Body>
                     <Card.Title>{trip.location}</Card.Title>
                     <Card.Text>{trip.dates}</Card.Text>
+                    <Card.Text>{trip.id}</Card.Text>
                     <Card.Text>{trip.active ? 'Active' : 'Past'}</Card.Text>
-                    <Link to="/id">
-                        <Button className="tripButton" variant='info'>Trip Details</Button>
+                    <Link to={"/id:" + trip.id}>
+                        <Button className="tripButton" variant='info' onClick={handleClick}>Trip Details</Button>
                     </Link>
                 </Card.Body>
             </Card>
         </>
     )
 }
-
 export default Trip
