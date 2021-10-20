@@ -10,19 +10,16 @@ function NewTripButton(setTrips, trips) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    function handleSubmit() {
-        const updateTrips = [
-            ...trips,
-            {
-                id: 7,
-                location: location,
-                img: img,
-                dates: dates,
-                active: true
-            }
-        ];
-        setTrips(updateTrips);
-    }
+    function updateTrips() {
+        setTrips(...trips, {
+            id: 7,
+            location: location,
+            img: img,
+            dates: dates,
+            active: true,
+        });
+        console.log(trips);
+        }
 
         return (
             <div>
@@ -34,7 +31,7 @@ function NewTripButton(setTrips, trips) {
                         <Modal.Title>New Trip</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                    <Form>
+                    <Form onSubmit={updateTrips}>
                         <Form.Group className="mb-3">
                             <Form.Label>Destination</Form.Label>
                             <Form.Control type="input" placeholder="Destination" value={location} onChange={(e) => setLocation(e.target.value)}/>
@@ -47,7 +44,7 @@ function NewTripButton(setTrips, trips) {
                             <Form.Label>Image (optional)</Form.Label>
                             <Form.Control type="input" placeholder="Image URL" value={img} onChange={(e) => setImg(e.target.value)}/>                            
                         </Form.Group>
-                        <Button variant="primary" type="submit" onClick={handleSubmit}>
+                        <Button variant="primary" type="submit" onClick={console.log('submitted')}>
                             Create
                         </Button>
                     </Form>

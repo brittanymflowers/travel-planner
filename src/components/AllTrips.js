@@ -4,7 +4,7 @@ import Trip from './Trip'
 import NewTripButton from './NewTripButton';
 
 function AllTrips({trips, setTrips, selectedTrip, setSelectedTrip}) {
-    console.log(selectedTrip);
+    console.log(trips);
 
     return (
         <div>
