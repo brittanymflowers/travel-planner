@@ -1,16 +1,16 @@
 import React from 'react'
-import { ListGroupItem } from 'react-bootstrap'
 
 function PackingListItem({item}) {
 
     // const handleClick = () => {
     //     setSelectedTrip(trip);
     // }
-
     return (
-        <>
-            <ListGroupItem>{item.item_name}</ListGroupItem>
-        </>
+        <div class="center">
+            <div class="listItem">
+                <h4>{item.item_name}</h4>
+            </div>
+        </div>
     )
 }
 export default PackingListItem

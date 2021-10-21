@@ -39,3 +39,18 @@
 .tripButton {
   width: 100%;
 }
+
+.listItem {
+  width: 400px;
+  border-style: solid;
+  border-color: black;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}

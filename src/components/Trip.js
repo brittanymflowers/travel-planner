@@ -15,9 +15,8 @@ function Trip({trip, setSelectedTrip, selectedTrip}) {
                 <Card.Body>
                     <Card.Title>{trip.location}</Card.Title>
                     <Card.Text>{trip.dates}</Card.Text>
-                    <Card.Text>{trip.id}</Card.Text>
                     <Card.Text>{trip.active ? 'Active' : 'Past'}</Card.Text>
-                    <Link to={"/id:" + trip.id}>
+                    <Link to={"/" + trip.id}>
                         <Button className="tripButton" variant='info' onClick={handleClick}>Trip Details</Button>
                     </Link>
                 </Card.Body>

@@ -20,10 +20,10 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact render={() => <AllTrips trips={trips} setTrips={setTrips} selectedTrip={selectedTrip} setSelectedTrip={setSelectedTrip}/>} />
-          <Route path={"/id:" + selectedTrip.id} exact render={() => <TripDetails selectedTrip={selectedTrip}/>} />
-          <Route path={"/id:" + selectedTrip.id + "/packinglist"} render={() => <PackingList selectedTrip={selectedTrip} />} />
-          <Route path={"/id:" + selectedTrip.id + "/todolist"} render={() => <ToDoList selectedTrip={selectedTrip} />} />
-          <Route path={"/id:" + selectedTrip.id + "/agenda"} render={() => <Agenda selectedTrip={selectedTrip} />} />
+          <Route path={"/" + selectedTrip.id} exact render={() => <TripDetails selectedTrip={selectedTrip}/>} />
+          <Route path={"/" + selectedTrip.id + "/packinglist"} render={() => <PackingList selectedTrip={selectedTrip}/>} />
+          <Route path={"/" + selectedTrip.id + "/todolist"} render={() => <ToDoList selectedTrip={selectedTrip} />} />
+          <Route path={"/" + selectedTrip.id + "/agenda"} render={() => <Agenda selectedTrip={selectedTrip} />} />
         </Switch>
       </div>
     </Router>

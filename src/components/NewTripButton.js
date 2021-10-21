@@ -34,17 +34,17 @@ function NewTripButton(setTrips, trips) {
                     <Form onSubmit={updateTrips}>
                         <Form.Group className="mb-3">
                             <Form.Label>Destination</Form.Label>
-                            <Form.Control type="input" placeholder="Destination" value={location} onChange={(e) => setLocation(e.target.value)}/>
+                            <Form.Control type="input" placeholder="Destination" value={location} />
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Travel Dates</Form.Label>
-                            <Form.Control type="input" placeholder="Travel Dates" value={dates} onChange={(e) => setDates(e.target.value)}/>
+                            <Form.Control type="input" placeholder="Travel Dates" value={dates} />
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Image (optional)</Form.Label>
-                            <Form.Control type="input" placeholder="Image URL" value={img} onChange={(e) => setImg(e.target.value)}/>                            
+                            <Form.Control type="input" placeholder="Image URL" value={img} />                            
                         </Form.Group>
-                        <Button variant="primary" type="submit" onClick={console.log('submitted')}>
+                        <Button variant="primary" type="submit" onSubmit={console.log('submitted')}>
                             Create
                         </Button>
                     </Form>
