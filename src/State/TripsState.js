@@ -82,12 +82,12 @@ let TripState = [{
       },
       {
         id: 3,
-        item_name: 'Toothpaste',
+        item_name: 'Fancy Hat',
         checked: false,
       },
       {
         id: 4,
-        item_name: 'Socks',
+        item_name: 'Deodorant',
         checked: false,
       },
       {

@@ -2,9 +2,6 @@ import React from 'react'
 
 function PackingListItem({item}) {
 
-    // const handleClick = () => {
-    //     setSelectedTrip(trip);
-    // }
     return (
         <div class="center">
             <div class="listItem">
